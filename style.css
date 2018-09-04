@@ -9,9 +9,7 @@ body {
 
 header {
 	height: 600px;
-	min-height: 600px;
 	width: auto;
-	min-width: 650px;
 	background-image: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.25)),
 	url("http://www.yemekev.com/uploads/images/gallery/yemekev-5.jpg");
 	background-position: center;
@@ -34,9 +32,11 @@ header {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.topbar h1 {
+.topbar .sitename {
 	display: inline-block;
 	margin: 20px 0;
+	cursor: default;
+	width: 48%;
 }
 
 .menu {
@@ -44,6 +44,7 @@ header {
 	float: right;
 	list-style: none;
 	margin-top: 30px;
+	width: 43%;
 }
 
 .menu li {
@@ -53,10 +54,10 @@ header {
 .menu li a {
 	color: white;
 	text-decoration: none;
-	padding: 5px 20px;
+	padding: 5px 15px;
 	font-family: Raleway;
 	font-size: 15px;
-	margin: 5px;
+	margin: 5px 0px;
 }
 
 .menu li a:hover {
@@ -68,6 +69,10 @@ header {
 	color: white;
 	font-size: 40px;
 	margin-top: 180px;
+}
+
+.entrance h1, p {
+	cursor: default;
 }
 
 .content {
@@ -82,14 +87,13 @@ header {
 	padding-top: 20px;
 	font-size: 20px;
 	font-weight: 600;
-	
+	cursor: default;
 }
 
 .grid {
 	border: 0px black solid;
 	height: 600px;
 	width: auto;
-	min-width: 650px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
@@ -112,8 +116,9 @@ header {
 	margin-left: 20px;
 }
 
-.box:hover h1{
+.box:hover h1 {
 	color: red;
+	cursor: pointer;
 }
 
 .box p {
@@ -131,6 +136,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	cursor: pointer;
+
 }
 
 .pastry {
@@ -140,7 +147,7 @@ header {
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
-	
+	cursor: pointer;
 }
 
 .dessert {
@@ -150,6 +157,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	cursor: pointer;
 }
 
 .meze {
@@ -159,6 +167,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	cursor: pointer;
 }
 
 .soup {
@@ -168,6 +177,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	cursor: pointer;
 }
 
 .share {
@@ -207,4 +217,30 @@ footer {
 	width: 100%;
 	background-color: gray;
 	text-align: left;
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	.topbar {
+		text-align: center;
+	}
+	.menu {
+		float: none;
+		text-align: center;
+		margin-top: 0px;
+		background-color: #666666;
+		width: 100%
+	}
+	.menu li {
+		display: block;
+	}
+	.entrance {
+		text-align: center;
+		color: white;
+		font-size: 30px;
+		margin-top: 100px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
 }
